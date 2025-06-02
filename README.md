@@ -16,5 +16,10 @@
 |숫자형|NUMBER(P, S) : P는 소수점을 포함은 전체 길이, S는 소수점 이하 자리 길이|
 |날짜형|DATE : YYYYMMDD HH24MDSS까지 나타냄|
 ||TIMESTAMP : 밀리초까지 나타냄|
-|형변환|CAST :
-        - 
+|형변환|CAST : ex) |
+|| SELECT CAST(7566 AS VARCHAR2(4))      AS number_to_char|
+||  , CAST('1981-04-02' AS DATE)     AS char_to_date|
+||  , CAST('2975' AS NUMBER(5))      AS char_to_number1|
+||  , CAST('2975.45' AS NUMBER(5,1)) AS char_to_number2|
+|| FROM dual|
+|| TO_CHAR, TO_DATE, TO_NUMBER|
