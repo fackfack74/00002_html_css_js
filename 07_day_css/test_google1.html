@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../ico/001.ico" />
+    <title>Google</title>
+    <style>
+        body{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 1000px;
+            height: 50px;
+
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+        }
+        header .header_left{
+            width: 200px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_left .google_info{
+            width: 70px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_left .google_info:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        header .header_left .google_store{
+            width: 70px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_left .google_store:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        header .header_middle{
+            width: 450px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_right{
+            width: 350px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_right .gmail{
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_right .gmail:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        header .header_right .image{
+            width: 50px;
+            height: 50px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_right .image:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        header .header_right .labs{
+            /*
+            width: 35px;
+            height: 35px;
+            */
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_right .labs:hover{
+            cursor: pointer;
+
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: lightgray;
+        }
+        header .header_right .apps{
+            /*
+            width: 35px;
+            height: 35px;
+            */
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .header_right .apps:hover{
+            cursor: pointer;
+
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: lightgray;
+        }
+        
+        main{
+            width: 1000px;
+            height: 700px;
+
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+
+            margin-top: 25%;
+            margin-bottom: 25%;
+        }
+        main .main_logo{
+            width: 1000px;
+            height: 150px;
+        }
+        main .main_logo img:nth-child(1){
+            width: 300px;
+            height: auto;
+        }
+        main .main_search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 500px;
+            height: 50px;
+
+            border: 1px solid gray;
+            margin-left: 250px;
+            margin-right: 250px;
+
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        main .main_search .search_img{
+            margin-left: -120px;
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*
+        main .main_search .search_img:hover{
+            cursor: pointer;
+
+            border-radius: 50%;
+            background-color: lightgray;
+        }*/
+        main .main_search .search_box{
+            width: 320px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .main_search .search_box input:nth-child(1){
+            width: 300px;
+            border-style: none;
+            outline: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .main_search .keyboard_img{
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .main_search .keyboard_img:hover{
+            cursor: pointer;
+            /*
+            border-radius: 50%;
+            background-color: lightgray;
+            */
+        }
+        main .main_search .mic_img{
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .main_search .mic_img:hover{
+            cursor: pointer;
+
+            /*
+            border-radius: 50%;
+            background-color: lightgray;
+            */
+        }
+        main .main_search .camera_img{
+            margin-right: -120px;
+
+            width: 40px;
+            height: 40px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .main_search .camera_img:hover{
+            cursor: pointer;
+            /*
+            border-radius: 50%;
+            background-color: lightgray;*/
+        }
+        main .text_search{
+            width: 1000px;
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .text_search .google_search{
+            margin-right: 50px;
+        }
+        main .text_search .google_search:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        main .text_search .feeling_lucky{
+
+        }
+        main .text_search .feeling_lucky:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        main .last_description{
+            width: 1000px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .last_description .kor_encourage{
+            color: red;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_left">
+            <div class="google_info">Google 정보</div>
+            <div class="google_store">스토어</div>
+        </div>
+        <div class="header_middle"></div>
+        <div class="header_right">
+            <div class="gmail">Gmail</div>
+            <div class="image">이미지</div>
+            <div class="labs">
+                <img src="../img/experiment.svg">
+            </div>
+            <div class="apps">
+                <img src="../img/apps.svg">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main_logo">
+            <img src="../img/google_logo.jpg">
+        </div>
+        <div class="main_search">
+            <div class="search_img">
+                <img src="../img/search.svg">
+            </div>
+            <div class="search_box">
+                <input type="text" id="txt_seach" name="txt_search" placeholder="검색어를 입력하세요">
+            </div>
+            <div class="keyboard_img">
+                <img src="../img/keyboard.svg">
+            </div>
+            <div class="mic_img">
+                <img src="../img/mic.svg">
+            </div>
+            <div class="camera_img">
+                <img src="../img/photo_camera.svg">
+            </div>
+        </div>
+        <div class="text_search">
+            <div class="google_search">Google 검색</div>
+            <div class="feeling_lucky">I'm Feeling Lucky</div>
+        </div>
+        <div class="last_description">
+            <div class="kor_encourage">지금 시청해 보세요!</div>
+            <div class="open_ai">Google I/O 2025에서 최신 AI 혁신 기술을 공개합니다.</div>
+        </div>
+    </main>
+</body>
+</html>

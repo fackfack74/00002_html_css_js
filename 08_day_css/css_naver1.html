@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 800px;
+            height: 850px;
+            padding: 0;
+
+            border: 1px solid black;
+        }
+        .naver_logo{
+            width: 800px;
+            height: 60px;
+            background-image: url("../img/NAVER_CI_Green.png");
+            background-size: auto 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            margin-top: 20px;
+        }
+        .id{
+            width: 500px;
+            height: 80px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .id .id_desc{
+            height: 30px;
+            font-weight: 600;
+        }
+        .id .id_input{
+            width: 500px;
+            height: 40px;
+            border: 1px solid lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .id .id_input input:nth-child(1){
+            width: 370px;
+            height: 30px;
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+        .id .id_input input:nth-child(2){
+            width: 100px;
+            height: 30px;
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+
+        .pw1{
+            width: 500px;
+            height: 80px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pw1 .pw1_desc{
+            height: 30px;
+            font-weight: 600;
+        }
+        .pw1 .pw1_input{
+            width: 500px;
+            height: 40px;
+            border: 1px solid lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pw1 .pw1_input input:nth-child(1){
+            width: 370px;
+            height: 30px;
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+        .pw1 .pw1_input .pw1_input_img{
+            width: 100px;
+            height: 30px;
+
+            margin: 3px 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pw2{
+            width: 500px;
+            height: 80px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pw2 .pw2_desc{
+            height: 30px;
+            font-weight: 600;
+        }
+        .pw2 .pw2_input{
+            width: 500px;
+            height: 40px;
+            border: 1px solid lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pw2 .pw2_input input:nth-child(1){
+            width: 370px;
+            height: 30px;
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+        .pw2 .pw2_input .pw2_input_img{
+            width: 100px;
+            height: 30px;
+
+            margin: 3px 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .name{
+            width: 500px;
+            height: 80px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .name .name_desc{
+            height: 30px;
+            font-weight: 600;
+        }
+        .name .name_input{
+            width: 500px;
+            height: 40px;
+            border: 1px solid lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .name .name_input input:nth-child(1){
+            width: 478px;
+            height: 30px;
+
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+
+        .birth{
+            width: 500px;
+            height: 80px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            font-weight: 600;
+        }
+        .birth .birth_desc{
+            height: 30px;
+        }
+        .birth .birth_input{
+            width: 500px;
+            height: 40px;
+            border: 1px solid lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .birth .birth_input #birth_year{
+            width: 150px;
+            height: 30px;
+
+            margin-right: 50px;
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+        .birth .birth_input #birth_month{
+            width: 110px;
+            height: 36px;
+
+            margin-right: 50px;
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+        .birth .birth_input #birth_date{
+            width: 110px;
+            height: 30px;
+
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+
+        .sex{
+            width: 500px;
+            height: 80px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sex .sex_desc{
+            height: 30px;
+            font-weight: 600;
+        }
+        .sex .sex_input{
+            width: 500px;
+            height: 40px;
+            border: 1px solid lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sex .sex_input #sex_sel{
+            width: 486px;
+            height: 36px;
+
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+
+        .mobile{
+            width: 500px;
+            height: 80px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .mobile .mobile_desc{
+            height: 30px;
+            font-weight: 600;
+        }
+        .mobile .mobile_input{
+            width: 500px;
+            height: 40px;
+            border: 1px solid lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mobile .mobile_input input:nth-child(1){
+            width: 478px;
+            height: 30px;
+
+            /*
+            border-style: none;
+            outline: none;*/
+        }
+        .join_member{
+            width: 500px;
+            height: 40px;
+
+            margin-top: 20px;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            color: white;
+            background-color: darkgreen;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="naver_logo"></div>
+        <div class="id">
+            <div class="id_desc">아이디</div>
+            <div class="id_input">
+                <input type="text" id="id">
+                <input type="text" id="email" placeholder="@naver.com">
+            </div>
+        </div>
+        <div class="pw1">
+            <div class="pw1_desc">비밀번호</div>
+            <div class="pw1_input">
+                <input type="password" id="pw1">
+                <div class="pw1_input_img">
+                    <img src="../img/lock.svg">
+                </div>
+            </div>
+        </div>
+        <div class="pw2">
+            <div class="pw2_desc">비밀번호 재확인</div>
+            <div class="pw2_input">
+                <input type="password" id="pw2">
+                <div class="pw2_input_img">
+                    <img src="../img/lock_clock.svg">
+                </div>
+            </div>
+        </div>
+        <div class="name">
+            <div class="name_desc">이름</div>
+            <div class="name_input">
+                <input type="text" id="name">
+            </div>
+        </div>
+        <div class="birth">
+            <div class="birth_desc">생년월일</div>
+            <div class="birth_input">
+                <input type="number" id="birth_year" maxlength="4" placeholder="년(4자)">
+                <select id="birth_month">
+                    <option selected>월</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <input type="number" id="birth_date" maxlength="2" placeholder="일">
+            </div>
+        </div>
+        <div class="sex">
+            <div class="sex_desc">성별</div>
+            <div class="sex_input">
+                <select id="sex_sel">
+                    <option>남자</option>
+                    <option>여자</option>
+                </select>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="mobile_desc">휴대전화</div>
+            <div class="mobile_input">
+                <input type="text" id="mobile">
+            </div>
+        </div>
+        <div class="join_member">
+            가입하기
+        </div>
+    </div>
+</body>
+</html>

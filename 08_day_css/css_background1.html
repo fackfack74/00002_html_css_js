@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 250px;
+            background-color: orange;
+            background-image: url("../img/heropy.png");
+            /* cover는 박스의 높이, 가로의 큰 값에 맞추어짐.
+               contain은 박스의 높이, 가로의 작은 값에 맞추어짐.
+            background-size: 100px auto;*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* fixed는 viewport의 크기에 맞춰 이미지 크기가 조절됨.*/
+            /* 스크롤은 이미지 크기를 기준으로 viewport가 작아지면 스크롤 생성. */
+            background-attachment: scroll;
+            
+            /*
+            background-position: center;
+            background-position: top right;
+            background-position: right top;
+            background-position: bottom left;*/
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>

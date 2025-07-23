@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="박재일">
+    <link rel="icon" type="image/x-icon" href="./001.ico" />
+    <title>fackfack페이지</title>
+</head>
+<body>
+    <figure>
+    <table border="1">
+    <!-- 단선
+    <table style="border-collapse: collapse;">
+    -->
+        <!-- thead > tbody > tfoot의 순서로 작성 됨.(코딩의 위치와 상관없음) -->
+        <!-- thead, tbody, tfoot 이 없다면 코딩의 순서대로 나열됨 -->
+        <caption>
+            <strong>국가대표 선수 명단</strong><br>
+            남자 마라톤
+        </caption>
+        
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black" rowspan="2">박재일</td>
+                <td style="border: 1px solid black">전라도</td>
+                <td style="border: 1px solid black" colspan="2">남성</td>
+<!--                <td style="border: 1px solid black"></td> -->
+            </tr>
+            <tr>
+<!--                <td style="border: 1px solid black">이재명</td> -->
+                <td style="border: 1px solid black">경상도</td>
+                <td style="border: 1px solid black" rowspan="2" colspan="2">남성</td>
+<!--                <td style="border: 1px solid black">대통령</td> -->
+            </tr>
+            <tr>
+                <td style="border: 1px solid black">이재명</td>
+                <td style="border: 1px solid black">경상도</td>
+                <!--
+                <td style="border: 1px solid black">남성</td>
+                <td style="border: 1px solid black">대통령</td>
+            -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td style="border: 1px solid black">name</td>
+                <td style="border: 1px solid black">local</td>
+                <td style="border: 1px solid black">sex</td>
+                <td style="border: 1px solid black">description</td>
+            </tr>
+        </tfoot>
+        <thead>
+            <tr>
+                <th style="border: 1px solid black">이름</th>
+                <th style="border: 1px solid black">지역</th>
+                <th style="border: 1px solid black">성별</th>
+                <th style="border: 1px solid black">비고</th>
+            </tr>
+        </thead>
+    </table>
+    </figure>
+</body>
+</html>

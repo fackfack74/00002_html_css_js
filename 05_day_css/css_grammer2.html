@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모든 항목 적용 */
+        /* *{
+            color: red;
+        } */
+         li{
+            color: red;
+         }
+         .orange{/* class 속성 */
+            color: orange;
+         }
+         /* id 속성 1개만 존재해야 함. */
+         /*     
+         #green{
+            color: green;
+         }*/
+         span.orange{
+            color: orange;
+         }
+         p#blue{
+            color: blue;
+         }
+         /* > 은 앞 Tag의 바로 밑 항목을 지칭 */
+         /* table > .red 는 적용되지 않음. 구조가 table > tr > td 라 tr > .red 로 선언해야 함. */
+         /* tr > .red{
+            color: red;
+         } */
+          /* ' '은 앞 Tag의 하위 모두를 지칭 */
+          /* table > .red는 적용이 안되지만 table .red는 td도 적용됨. */
+         table .red{
+            color: green;
+         }
+         /* class가 orange 로 선언된 동일레벨(형제)의 바로 다음 인접한 tag li 하나만 적용 */
+         .orange + li{
+            color: blueviolet;
+         }
+         /* class가 orange 로 선언된 동일레벨(형제)의 다음 모든 tag li 적용 */
+         .orange ~ li{
+            color: greenyellow;
+         }
+         /* Tag a에 마우스가 올라간 때 */
+         a:hover{
+            color: red;
+            font-size: 40px;
+         }
+         /* 바로 앞과 같은 상황일 때 중복된 속성인 경우 뒤에 거가 적용 */
+         /* 즉, Tag a에 마우스가 올라가면 사이즈는 40px 이고, 색상은 gray가 된다. */
+         a:hover{
+            color: gray;
+         }
+         /* Tag a에 마우스를 클릭하고 있을 때 */
+         a:active{
+            color: yellow;
+         }
+         /* cursor가 있을 때 */
+         a:focus{
+            color: brown;
+         }
+         input:focus{
+            background-color: orange;
+         }
+         /* class가 fruits인 하부 Tag 첫번째가 span일 때 */
+         .fruits span:first-child{
+            color: red;
+         }
+         /* class가 fruits인 하부 Tag 마지막이 h3일 때 */
+         .fruits h3:last-child{
+            color: red;
+         }
+         /* class가 fruits인 하부 Tag 중 4번째 */
+         .fruits *:nth-child(4){
+            color: red;
+         }
+         /* class가 fruits인 하부 Tag 중 짝수번째 */
+         /* .fruits *:nth-child(2n){
+            color: red;
+         } */
+         /* class가 fruits인 하부 Tag 중 홀수번째 */
+         /* n은 0부터 ~ */
+         .fruits *:nth-child(2n+1){
+            color: red;
+         }
+         /* Tag tr 밑에 모든 항목 중 짝수번째 */
+         tr *:nth-child(2n){
+            color: blue;
+         }
+         /* class가 fruits인 하부 Tag 중 span이 아닌것 */
+         .fruits *:not(span){
+            color:blue;
+         }
+         /* class가 box인 항목 데이터의 앞, 뒤에 적용 */
+         .box::before{
+            content:"앞!";
+            color: red;
+         }
+         .box::after{
+            content:"뒤!";
+            color: blue;
+         }
+         /* 속성이 disabled 인 경우 */
+         [disabled]{
+            background-color: gray;
+            color: red;
+         }
+         [readonly]{
+            color: blue;
+         }
+         .animal{
+            color: red;
+         }
+         .color_green{
+            color: green;
+         }
+         #color_blueviolet{
+            color: blueviolet;
+         }
+    </style>
+
+</head>
+<body>
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+            <li>수박</li>
+            <li>망고</li>
+        </ul>
+        <div>당근</div>
+        <p id="blue">토마토</p>
+        <span class="orange" id="green">오렌지</span>
+        <br>
+        <table>
+            <tr>
+                <td class="red">첫번째</td>
+                <td>두번째</td>
+                <td>세번째</td>
+                <td>네번째</td>
+            </tr>
+        </table>
+        <a href="https://www.naver.com">NAVER</a>
+        <br>
+        <input type="text" id="green" name="name" placeholder="이름">
+    </div>
+    <div class="fruits">
+        <p>복숭아</p>
+        <span>딸기</span>
+        <span>수박</span>
+        <div>오렌지</div>
+        <p>망고</p>
+        <h3>사과</h3>
+    </div>
+
+    <div class="box">
+        <br>
+        Content!
+        <br>
+    </div>
+    <input type="text" id="name" name="name" value="이름" disabled>
+    <input type="text" id="id" name="id" value="아이디" readonly>
+    <br>
+    <div class="ecosystem">
+        생태계
+        <div class="animal">
+            동물
+            <div class="tiger">호랑이</div>
+            <div class="lion">사자</div>
+            <div class="elephant">코끼리</div>
+        </div>
+        <div class="plant">식물</div>
+    </div>
+    <div class="color_green" id="color_blueviolet" style="color: coral;">안녕하세요</div>
+</body>
+</html>

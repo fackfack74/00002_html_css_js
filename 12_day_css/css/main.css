@@ -1,0 +1,252 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    height: 1600px;
+}
+header{
+    width: 100vw;
+    /* height: 15vh; */
+    height: 150px;
+    position: fixed;
+    z-index: 1;
+    /* border: 1px dashed black; */
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+hr{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .header_top{
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+
+    /* border: 2px solid red; */
+}
+header .header_top .top_introduce{
+    width: 100%;
+    height: 30%;
+
+    font-size: 12px;
+    color: rgb(47, 47, 47);
+
+    display: flex;
+    position: left;
+
+    /* border: 1px solid blue; */
+}
+header .header_top .top_introduce img{
+    height: 80%;
+    width: auto;
+    margin-right: 10px;
+    /* size: auto; */
+}
+header .header_top .top_introduce p{
+    height: 100%;
+    width: auto;
+    margin: auto 0;
+}
+
+header .header_top .inner{
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    position: left;
+
+    /* border: 1px solid blue;  */
+}
+header .header_top .inner .logo{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+}
+header .header_top .inner .logo:hover{
+    cursor: pointer;
+}
+header .header_top .inner .logo img{
+    height: 70%;
+    width: auto;
+}
+header .header_top .inner .menu{
+    width: 80%;
+    height: 100%;
+}
+header .header_top .inner .menu .helps{
+    width: 100%;
+    height: 40%;
+    position: relative;
+
+    display: flex;
+    justify-content: right;
+}
+header .header_top .inner .menu .helps ul.help{
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0px;
+
+    font-size: 12px;
+    font-weight: 300;
+}
+header .header_top .inner .menu .helps ul li{
+    height: 100%;
+    display: inline-block;
+    /* vertical-align: middle; */
+    margin-right: 5px;
+    
+    /* position: flex;
+    justify-content: center; */
+}
+header .header_top .inner .menu .helps ul li:hover{
+    cursor: pointer;
+}
+header .header_top .inner .menu .helps ul li select{
+    border: none;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+header .header_top .inner .menu .helps ul li img{
+    height: 50%;
+    width: auto;
+    vertical-align: middle;
+}
+
+header .header_top .inner .menu .searchs{
+    width: 100%;
+    height: 60%;
+    position: relative;
+
+    display: flex;
+    justify-content: right;
+}
+header .header_top .inner .menu .searchs ul.search{
+    margin: 0;
+    
+    font-size: 16px;
+    font-weight: 500;
+
+}
+header .header_top .inner .menu .searchs ul.search li{
+    height: 100%;
+    display: inline-block;
+    margin-top: 5%;
+    margin-right: 20px;
+    
+    vertical-align: bottom;
+}
+header .header_top .inner .menu .searchs ul.search li:hover{
+    cursor: pointer;
+}
+
+header .header_top .inner .menu .searchs ul.search li img{
+    height: 40%;
+    width: auto;
+    vertical-align: middle;
+}
+header .header_bottom{
+    width: 80%;
+    height: 30%;
+    margin: 0 auto;/* 전체 가로의 중앙 위치 */
+
+    display: flex;
+    align-items: center;
+
+    /* border: 2px solid green; */
+}
+header .header_bottom .bottom_item{
+    height: 100%;
+    padding-right: 20px;
+}
+header .header_bottom .bottom_item .bottom_item_name{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+header .header_bottom .bottom_item .bottom_item_name:hover{
+    background-color: rgb(95, 158, 160, 0.5);
+}
+header .header_bottom .bottom_item:hover .bottom_item_content,
+header .header_bottom .bottom_item:hover .bottom_item_content .content_menu{
+    /* display: block; */
+    display: flex;
+}
+
+header .header_bottom .bottom_item .bottom_item_content{
+    display: none;
+    width: 100vw;
+    height: 400px;
+    /* absolute로 선언하면 부모를 기준으로 하기때문에 현위치부터 우측넘어까지 생성
+    fixed로 선언을 하고, left: 0; 으로 해야 좌측끝부터 생성 */
+    position: fixed;
+    margin-top: 2px;
+    left: 0;
+
+    background-color: white;
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+header .header_bottom .bottom_item .bottom_item_content .content_menu{
+    display: none;
+    width: 80%;
+    height: 100%;
+    /* background-color: white; */
+
+    /* display: flex; */
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    /* margin: 0 auto; */
+    /* margin-top: 5px; */
+}
+
+header .header_bottom .bottom_item .bottom_item_content .content_menu .content_menu_item{
+    width: 230px;
+    height: 180px;
+    margin-top: 10px;
+    margin-right: 20px;
+
+    /* border: 1px dashed blue; */
+}
+header .header_bottom .bottom_item .bottom_item_content .content_menu .content_menu_item h4{
+    height: 10%;
+    
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+header .header_bottom .bottom_item .bottom_item_content .content_menu .content_menu_item span{
+    display: block;
+    height: 50%;
+    font-size: 14px;
+    border-top: 1px solid grey;
+}
+header .header_bottom .bottom_item .bottom_item_content .content_menu .content_menu_item h5{
+    height: 20%;
+    margin: 0;
+}
+header .header_bottom .bottom_item .bottom_item_content .content_menu .content_menu_item:hover h4,
+header .header_bottom .bottom_item .bottom_item_content .content_menu .content_menu_item:hover h5{
+    cursor: pointer;
+}
+
+.middle_body{
+    position: fixed;
+    top: 155px;
+    width: 100vw;
+    height: 1450px;
+    background-color: orange;
+}

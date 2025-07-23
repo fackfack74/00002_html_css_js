@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 100vw;
+            height: 150px;
+            margin: 0 auto;
+
+            background-color: rgb(246, 245, 240);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header .left_logo{
+            width: 30%;
+            height: 100%;
+
+            background-image: url("../img/starbucks_logo.png");
+            background-size: auto;
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            background-position: left;
+
+            margin-left: 30px;
+        }
+        .header .right_top{
+            width: 70%;
+            height: 100%;
+
+            margin-right: 30px;
+        }
+        .header .right_top .login{
+            height: 50%;
+            font: inherit;
+            font-size: 13px;
+            font-weight: 400;
+            color: #656565;
+
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        .header .right_top .login .login_sub{
+            padding-left: 15px;
+            padding-right: 15px;
+
+            border-right: 2px solid rgb(195, 195, 195);
+        
+        }
+        .header .right_top .login .login_sub:hover{
+            color: black;
+        }
+        .header .right_top .login #search{
+            /* width: 20%;
+            height: 100%; */
+            width: 30px;
+            height: 30px;
+
+            padding: 0;
+            margin: 0;
+            background-image: url("../img/search.svg");
+            /* background-size: auto; */
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            /* border: none; */
+            border: 1px solid rgb(195, 195, 195);
+            border-radius: 20%;
+
+            margin-left: 20px;
+        }
+        .header .right_top .login #search .search_box{
+            display: none;
+        }
+        .header .right_top .login #search:hover .child-div{
+            display: block;
+        }
+
+        .header .right_top .group_menu{
+            height: 50%;
+            font: inherit;
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+            
+            display: flex;
+            justify-content: right;
+            align-items: top;
+        }
+        .header .right_top .group_menu .group_menu_sub{
+            padding-left: 15px;
+            padding-right: 15px;
+            /* border: 1px solid rgb(195, 195, 195); */
+        }
+        .header .right_top .group_menu .group_menu_sub:hover{
+            color: greenyellow;
+
+            background-color: black;
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="left_logo"></div>
+        <div class="right_top">
+            <div class="login">
+                <div class="login_sub">Sign In</div>
+                <div class="login_sub">My Starbucks</div>
+                <div class="login_sub">Customer Service & Ideas</div>
+                <div class="login_sub">Find a Store</div>
+                <div class="login_sub" id="search">
+                    <div class="search_box">
+                        <input type="text" id="search_box" name="search_box" placeholder="통합검색">
+                    </div>
+                </div>
+            </div>
+
+            <div class="group_menu">
+                <!-- <div class="top_coffee">COFFEE</div>
+                <div class="top_menu">MENU</div>
+                <div class="top_store">STORE</div>
+                <div class="top_responsibility">RESPONSIBILITY</div>
+                <div class="top_my_starbucks_rewards">MY STARBUCKS REWARDS</div>
+                <div class="top_new">WHAT'S NEW</div> -->
+                <div class="group_menu_sub">COFFEE</div>
+                <div class="group_menu_sub">MENU</div>
+                <div class="group_menu_sub">STORE</div>
+                <div class="group_menu_sub">RESPONSIBILITY</div>
+                <div class="group_menu_sub">MY STARBUCKS REWARDS</div>
+                <div class="group_menu_sub">WHAT'S NEW</div>
+            </div>
+        </div>
+    </div>
+        <main>
+            <div class="main"></div>
+        </main>
+        <footer>
+
+        </footer>
+    
+</body>
+</html>

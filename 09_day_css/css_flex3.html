@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 300px;
+            background-color: royalblue;
+            
+            display: flex;
+            flex-wrap: wrap;/* 자식(.item)의 크기를 유지하고, viewport가 작아지면 하나씩 이동 */
+                            /* 선언을 하지않으면 자식(.item)의 크기가 줄어듬. */
+            flex-direction: column;
+            /*
+            justify-content: space-around;*/
+            /* end : 우측끝, center : 가운데 */
+            /* space_between : 처음과 끝에 놓이며 중간은 균등한 간격을 두고 정렬 */
+            /* space_around : 가운데를 기준으로 균등한 간격을 두고 정렬 */
+
+    
+            /*
+            align-content: flex-start;*/
+            /* strech : default 자식의 크기가 넘을경우 다음 라인으로 균등 간격으로 이동.*/
+            /* flex-start : 자식의 크기가 넘을경우 다음 라인으로 접하여 이동.*/
+        }
+        .container .item{
+            width: 100px;
+            height: 100px;
+            border: 3px dashed red;
+            background-color: orange;
+        }
+
+        /* order : 값이 작은게 우선으로 순서를 정함. */
+        /* flex-grow : 1부터 이며, 부모에게 여백이 있을 때 자식들이 배당 받음.(flex-direction) */
+        .container .item:nth-child(1){
+            flex-grow: 1;
+        }
+        .container .item:nth-child(2){
+            flex-grow: 0;
+        }
+        .container .item:nth-child(3){
+            flex-grow: 3;
+        }
+        .container .item:nth-child(4){
+            flex-grow: 0;
+        }
+        .container .item:nth-child(5){
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="transform: skewX(-30deg);">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <!-- emmet 사용법 -->
+     <!-- div.container2>div.item1.item${$}*10 [Enter]-->
+      <!-- Tag div에 class는 container2로 하고 
+       하부 Tag div의 class는 item1이라하고 각각 item에 별도의 번호$를 지정하고
+       안에 Text는{$} 해당 번호로 입력. 10개를 생성.
+       밑이 결과물 -->
+    <div class="container2">
+        <div class="item1 item1">1</div>
+        <div class="item1 item2">2</div>
+        <div class="item1 item3">3</div>
+        <div class="item1 item4">4</div>
+        <div class="item1 item5">5</div>
+        <div class="item1 item6">6</div>
+        <div class="item1 item7">7</div>
+        <div class="item1 item8">8</div>
+        <div class="item1 item9">9</div>
+        <div class="item1 item10">10</div>
+    </div>
+</body>
+</html>
