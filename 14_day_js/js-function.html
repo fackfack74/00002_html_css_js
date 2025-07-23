@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function print(person){
+//            if(person === undefined || person === null){
+            if(!person){
+                console.log("person이 없습니다.");
+                return;
+            }
+            if(person.name === undefined){
+                console.log("person에 name 항목이 없습니다.");
+                return;
+            }
+            console.log(person.name);
+        }
+        const person = {
+//            name: "John",
+            age: 20,
+        }
+
+//        print(person);
+//        print(null);
+        print();
+
+        console.log(!undefined);
+        console.log(!null);
+        console.log(!0);
+        console.log(!'');
+        console.log(!NaN);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

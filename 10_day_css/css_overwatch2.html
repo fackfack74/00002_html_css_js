@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+
+            background-image: url("./overwatch-hero/images/bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container{
+            padding-top: 5vh;
+
+            border: 1px dashed black;
+        }
+        .container .heroes{
+            max-width: 1000px;
+            height: 75vh;
+            margin: 0 auto;
+            border: 1px dashed red;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        .container .heroes .hero{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border-radius: 10px;
+            transform: skewX(-10deg);
+            overflow: hidden;
+            box-sizing: border-box;
+
+            border: 3px solid orange;
+            background-color: lightgray;
+
+            transition: 
+            transform .1s, 
+            background-color .6s;
+        }
+        .container .heroes .hero:hover{
+            transform: scale(1.5) skewX(-10deg);
+            /* width, height 로 크기를 조절하면 좌측 상단을 기준으로 조절됨.
+            transform: scale의 경우 가운데를 기준으로 조절됨. */
+            z-index: 1;
+        }
+        .container .heroes .hero .img{
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: 90px;
+            background-repeat: no-repeat;
+            transform: translateX(-16px) skewX(14deg);
+        }
+        .container .heroes .hero:nth-child(1) .img{
+            background-image: url("./overwatch-hero/images/hero1.png");
+        }
+        .container .heroes .hero:nth-child(2) .img{
+            background-image: url("./overwatch-hero/images/hero2.png");
+        }
+        .container .heroes .hero:nth-child(3) .img{
+            background-image: url("./overwatch-hero/images/hero3.png");
+        }
+        .container .heroes .hero:nth-child(4) .img{
+            background-image: url("./overwatch-hero/images/hero4.png");
+        }
+        .container .heroes .hero:nth-child(5) .img{
+            background-image: url("./overwatch-hero/images/hero5.png");
+        }
+        .container .heroes .hero:nth-child(6) .img{
+            background-image: url("./overwatch-hero/images/hero6.png");
+        }
+        .container .heroes .hero:nth-child(7) .img{
+            background-image: url("./overwatch-hero/images/hero7.png");
+        }
+        .container .heroes .hero:nth-child(8) .img{
+            background-image: url("./overwatch-hero/images/hero8.png");
+        }
+        .container .heroes .hero:nth-child(9) .img{
+            background-image: url("./overwatch-hero/images/hero9.png");
+        }
+        .container .heroes .hero:nth-child(10) .img{
+            background-image: url("./overwatch-hero/images/hero10.png");
+        }
+
+        .container .heroes .hero:nth-child(11) .img{
+            background-image: url("./overwatch-hero/images/hero11.png");
+        }
+        .container .heroes .hero:nth-child(12) .img{
+            background-image: url("./overwatch-hero/images/hero12.png");
+        }
+        .container .heroes .hero:nth-child(13) .img{
+            background-image: url("./overwatch-hero/images/hero13.png");
+        }
+        .container .heroes .hero:nth-child(14) .img{
+            background-image: url("./overwatch-hero/images/hero14.png");
+        }
+        .container .heroes .hero:nth-child(15) .img{
+            background-image: url("./overwatch-hero/images/hero15.png");
+        }
+        .container .heroes .hero:nth-child(16) .img{
+            background-image: url("./overwatch-hero/images/hero16.png");
+        }
+        .container .heroes .hero:nth-child(17) .img{
+            background-image: url("./overwatch-hero/images/hero17.png");
+        }
+        .container .heroes .hero:nth-child(18) .img{
+            background-image: url("./overwatch-hero/images/hero18.png");
+        }
+        .container .heroes .hero:nth-child(19) .img{
+            background-image: url("./overwatch-hero/images/hero19.png");
+        }
+        .container .heroes .hero:nth-child(20) .img{
+            background-image: url("./overwatch-hero/images/hero20.png");
+        }
+
+        .container .heroes .hero:nth-child(21) .img{
+            background-image: url("./overwatch-hero/images/hero21.png");
+        }
+        .container .heroes .hero:nth-child(22) .img{
+            background-image: url("./overwatch-hero/images/hero22.png");
+        }
+        .container .heroes .hero:nth-child(23) .img{
+            background-image: url("./overwatch-hero/images/hero23.png");
+        }
+        .container .heroes .hero:nth-child(24) .img{
+            background-image: url("./overwatch-hero/images/hero24.png");
+        }
+        .container .heroes .hero:nth-child(25) .img{
+            background-image: url("./overwatch-hero/images/hero25.png");
+        }
+        .container .heroes .hero:nth-child(26) .img{
+            background-image: url("./overwatch-hero/images/hero26.png");
+        }
+        .container .heroes .hero:nth-child(27) .img{
+            background-image: url("./overwatch-hero/images/hero27.png");
+        }
+        .container .heroes .hero:nth-child(28) .img{
+            background-image: url("./overwatch-hero/images/hero28.png");
+        }
+        .container .heroes .hero:nth-child(29) .img{
+            background-image: url("./overwatch-hero/images/hero29.png");
+        }
+        .container .heroes .hero:nth-child(30) .img{
+            background-image: url("./overwatch-hero/images/hero30.png");
+        }
+
+        .container .heroes .hero:nth-child(31) .img{
+            background-image: url("./overwatch-hero/images/hero31.png");
+        }
+        .container .heroes .hero:nth-child(32) .img{
+            background-image: url("./overwatch-hero/images/hero32.png");
+        }
+        .container .logo{
+            width: 100vw;
+            height: 20vh;
+            border: 2px dashed blue;
+
+            background-image: url("./overwatch-hero/images/logo_overwatch.png");
+            background-size: 15%;
+            background-repeat: no-repeat;
+            background-position: top center;
+
+            display: absolute;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heroes">
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+            <div class="hero">
+                <div class="img"></div>
+            </div>
+        </div>
+        <div class="logo"></div>
+    </div>
+</body>
+</html>

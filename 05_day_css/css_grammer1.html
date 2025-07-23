@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="박재일">
+    <link rel="shortcut icon" type="image/x-icon" href="../ico/001.ico" />
+    <title>CSS 페이지</title>
+    <!-- CSS는 inline방식 > 내장 방식 > 링크방식 > @import 방식 -->
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        /* style 안에서 import 할 수 있으며, link 된 css 내 에서도 import 할 수 있음 */
+        @import url("../css/test.css");
+        /* 내장 방식 CSS */
+        /* 해당 페이지에서만 적용 */
+        /* CSS 주석 단축키 Ctrl + / */
+        div{
+            font-size: 20px;
+            color: red;
+        }
+        span{
+            font-size: 40px;
+            color: blue;
+        }
+        h1{
+            font-size: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        글자가 빨간색이고 글자크기는 20px block
+    </div>
+    <!-- 하단 처럼 Tag에 직접 작성하는 방식을 인라인 방식이라 하고, 상단 head에서 설정한 style을 내장 방식 이라 함 -->
+    <!-- 인라인 방식이 우선시 된다. -->
+    <span style="font-size: 10px; color: green;">
+        글자가 파랑색이고 글자크기는 40px inline
+    </span>
+    <h1>
+        url link 글자
+    </h1>
+    <h2>
+        @import 글자
+    </h2>
+    <h2 class="box">
+        <!-- class가 우선 시 됨 -->
+        @import 글자
+    </h2>
+    <h3 class="box">
+        class 글자
+    </h3>
+    <h3>H3 Hello</h3>
+</body>
+</html>

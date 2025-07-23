@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="number">0</h2>
+    <div>
+        <button id="increase">+1</button>
+        <button id="decrease">-1</button>
+    </div>
+    <script>
+/*        document.getElementById("increase").addEventListener("click", function(){
+            incNumber();
+        });
+        document.getElementById("decrease").addEventListener("click", function(){
+            decNumber();
+        });
+        let item = document.getElementById("number");
+        function incNumber(){
+            let nowNum = item.textContent;
+            console.log(nowNum);
+            nowNum++;
+            console.log(nowNum);
+            item.textContent = nowNum;
+        }
+
+        function decNumber(){
+            let nowNum = item.textContent;
+            console.log(nowNum);
+            if(nowNum > 0)
+                nowNum--;
+            console.log(nowNum);
+            item.textContent = nowNum;
+        }*/
+        document.getElementById("increase").addEventListener("click", function(){
+//            calcuFun("increase");
+            calcuFun(1);
+        });
+        document.getElementById("decrease").addEventListener("click", function(){
+//            calcuFun("decrease");
+            calcuFun(-1);
+        });
+        let view = document.getElementById("number");
+//        function calcuFun(item){
+        function calcuFun(item){
+            console.log(item);
+            let nowNum = view.textContent;
+            nowNum = Number(nowNum) + item;
+            if(nowNum < 0)
+                nowNum = 0;
+/*            if(item === "increase")
+                nowNum++;
+            else{
+                if(nowNum > 0)
+                    nowNum--;
+            }*/
+            view.textContent = nowNum;
+        }
+    </script>
+</body>
+</html>

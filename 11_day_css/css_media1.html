@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 반응형(브라우저의 크기에 따라 반응하는 css 지원 기능) */
+        /* 기본문법 : @media(조건) { css스타일 } */
+        @media (max-width: 800px) { /* 브라우저 가로 크기가 800px 이하일 경우에만 적용 */
+            .small1{
+                background-color: tomato;
+            }
+        }
+        @media (min-width: 800px) { /* 브라우저 가로 크기가 800px 이상일 경우에만 적용 */
+            .large1{
+                background-color: royalblue;
+            }
+        }
+        @media screen and (min-width: 400px) and (max-width: 1000px){ /* 브라우저 가로 크기가 400px 이상이고 1000px 이하일 경우에만 적용 */
+            .medium1{
+                background-color: orange;
+            }
+        }
+        @media (min-width: 501px){
+            .mobile{
+                display: none;
+            }
+        }
+        @media (max-width: 500px){
+            .desktop{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="small1">좁은 화면에서의 배경색</div>
+    <div class="large1">넓은 화면에서의 배경색</div>
+    <div class="medium1">중간 화면에서의 배경색</div>
+
+    <div class="desktop">데스크탑 화면입니다.</div>
+    <div class="mobile">모바일 화면입니다.</div>
+</body>
+</html>

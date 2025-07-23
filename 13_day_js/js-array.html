@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let fruits = ['apple', 'banana', 'orange'];
+        fruits.push('grape');
+        console.log(fruits);
+
+        let numbers = [1, 2, 3, 4, 5];
+        let lastNumber = numbers.pop();
+        console.log(numbers);
+        console.log(lastNumber);
+
+        let firstFruit = fruits.shift();
+        console.log(firstFruit);
+        console.log(fruits);
+        fruits.unshift('apple');
+        console.log(fruits);
+
+        let colors = ['red', 'green', 'blue', 'yellow'];
+        colors.splice(1, 2);
+        console.log(colors);
+
+        let mergeArray = fruits.concat(colors);
+        console.log(mergeArray);
+
+        let sliceArray = mergeArray.slice(1, 5);
+        console.log(sliceArray);
+
+        let index = numbers.indexOf(3);
+        console.log(index);
+
+        let boolInclude = numbers.includes(5);
+        console.log(boolInclude);
+
+        numbers.forEach(function(number){
+            console.log(number);
+        });
+
+        let idxValue = mergeArray[0];
+        console.log(idxValue);
+
+        let members = [
+            ["홍길동", "이순신", "윤석열", "김건희"],
+            [23, 45, 67, 109],
+            ["male", "male", "male", "female"],
+        ]
+        console.log(members.length);
+        console.log(members[0].length);
+        for(i = 0; i < members.length; i++){
+            for(j = 0; j < members[i].length; j++)
+                console.log(members[i][j]);
+            console.log("\n");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

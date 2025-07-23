@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Hello, World!</h1>
+    <p class="content">This is a paragraph.</p>
+    <button onclick="changeText();">Change Text</button>
+
+    <script>
+        let titleSel = 0;
+        function changeText(){
+            let titleElement = document.getElementById("title");
+            console.log(titleElement);
+            if(titleSel === 0)
+//            if(titleElement.textContent.match("World"))
+                titleElement.textContent = "Hello, DOM!";
+            else
+                titleElement.textContent = "Hello, World!";
+            titleSel ^= 0x01;
+
+            let contentEx = document.querySelector(".content");
+            console.log(contentEx);
+        }
+    </script>
+</body>
+</html>

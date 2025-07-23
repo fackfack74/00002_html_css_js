@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- method : post방식은 입력된 값을 안보이게 전달. -->
+    <!-- method : get방식은 입력된 값을 노출되게 전달. method 선언을 안하면 기본 get방식임. -->
+    <form method="post" action="fake_server.php">
+        <label for="id">아이디</label>
+        <!-- id는 현 화면에서 사용되는 키값? -->
+        <!-- name은 전달될 때의 키값으로 사용됨. -->
+        <input type="text" id="id" name="id">
+        <br>
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" name="pw">
+        <br>
+        <input type="button" value="로그인">
+    </form>
+
+    <form method="post" action="fake_server.php">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="age">나이</label>
+        <input type="number" id="age" name="age">
+        <br>
+        <label for="character">성격</label>
+        <textarea id="character" name="character"></textarea>
+        <br>
+        <input type="submit" value="전송">
+        <input type="button" value="취소">
+    </form>
+</body>
+</html>

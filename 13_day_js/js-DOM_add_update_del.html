@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+    </ul>
+
+    <button onclick="addElement()">Add Elemnet</button>
+    <button onclick="modifyElement()">Modify Elemnet</button>
+    <button onclick="delElement()">Delete Elemnet</button>
+
+    <script>
+        function addElement(){
+            let myList = document.getElementById("myList");
+            let newItem = document.createElement("li");
+            newItem.textContent = (myList.childElementCount + 1) + "Grapes";
+            newItem.setAttribute("class", "dark");
+            console.log(myList.childElementCount);
+            myList.appendChild(newItem);
+            console.log(newItem);
+        }
+
+        function modifyElement(){
+            let listItem = document.querySelector("#myList li:nth-child(3)");
+            console.log(listItem);
+            listItem.textContent = "Blue Berry";
+        }
+
+        function delElement(){
+            let listItem = document.querySelector("#myList li:nth-child(5)");
+            console.log(listItem);
+            listItem.parentNode.removeChild(listItem);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+
+            background-image: url("./overwatch-hero/images/bg.jpg");
+            background-size: auto;
+            /* background-repeat: no-repeat; */
+            /* background-position: top center; */
+
+            text-align: center;
+        }
+        .container{
+            /* width: 1000px;
+            height: 800px; */
+            max-width: 1000px;
+            /* 위의 width, height 선언없이 max-width만 선언하면
+            화면 사이즈가 커지거나 줄었을때 하부 div가 자동으로 늘어나거나
+            밑으로 이동 */
+
+
+            margin: 0px auto;
+            
+            border: 1px dashed black;
+            /* background-image: url("./overwatch-hero/images/bg.jpg");
+            background-size: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center; */
+
+            position: relative;
+
+            display: flex;
+            flex-wrap: wrap;    
+
+            justify-content: center;
+            /* align-items: center; */
+            align-content: flex-start;
+        }
+        .container .top_space{
+            width: 1000px;
+            height: 100px;
+        }
+        .container .item{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+
+            border: 5px solid red;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            display: inline-flex;
+
+            transform: skew(-10deg);
+            overflow: hidden;
+        }
+        .container .item:hover{
+            width: 112px;
+            height: 112px;
+            margin: 3px;
+        }
+
+        .logo{
+            position: absolute;
+            bottom: 30px;
+
+            /* display: flex;
+            justify-content: center; */
+
+            width: 100vw;
+            height: 100px;
+            margin: 0 auto;
+
+            border: 1px dashed red;
+            background-image: url("./overwatch-hero/images/logo_overwatch.png");
+            background-size: 15%;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top_space"></div>
+        <div class="item" id="item1">
+            <img src="./overwatch-hero/images/hero1.png">
+        </div>
+        <div class="item" id="item2">
+            <img src="./overwatch-hero/images/hero2.png">
+        </div>
+        <div class="item" id="item3">
+            <img src="./overwatch-hero/images/hero3.png">
+        </div>
+        <div class="item" id="item4">
+            <img src="./overwatch-hero/images/hero4.png">
+        </div>
+        <div class="item" id="item5">
+            <img src="./overwatch-hero/images/hero5.png">
+        </div>
+        <div class="item" id="item6">
+            <img src="./overwatch-hero/images/hero6.png">
+        </div>
+        <div class="item" id="item7">
+            <img src="./overwatch-hero/images/hero7.png">
+        </div>
+        <div class="item" id="item8">
+            <img src="./overwatch-hero/images/hero8.png">
+        </div>
+        <div class="item" id="item9">
+            <img src="./overwatch-hero/images/hero9.png">
+        </div>
+        <div class="item" id="item10">
+            <img src="./overwatch-hero/images/hero10.png">
+        </div>
+        <div class="item" id="item11">
+            <img src="./overwatch-hero/images/hero11.png">
+        </div>
+        <div class="item" id="item12">
+            <img src="./overwatch-hero/images/hero12.png">
+        </div>
+        <div class="item" id="item13">
+            <img src="./overwatch-hero/images/hero13.png">
+        </div>
+        <div class="item" id="item14">
+            <img src="./overwatch-hero/images/hero14.png">
+        </div>
+        <div class="item" id="item15">
+            <img src="./overwatch-hero/images/hero15.png">
+        </div>
+        <div class="item" id="item16">
+            <img src="./overwatch-hero/images/hero16.png">
+        </div>
+        <div class="item" id="item17">
+            <img src="./overwatch-hero/images/hero17.png">
+        </div>
+        <div class="item" id="item18">
+            <img src="./overwatch-hero/images/hero18.png">
+        </div>
+        <div class="item" id="item19">
+            <img src="./overwatch-hero/images/hero19.png">
+        </div>
+        <div class="item" id="item20">
+            <img src="./overwatch-hero/images/hero20.png">
+        </div>
+        <div class="item" id="item21">
+            <img src="./overwatch-hero/images/hero21.png">
+        </div>
+        <div class="item" id="item22">
+            <img src="./overwatch-hero/images/hero22.png">
+        </div>
+        <div class="item" id="item23">
+            <img src="./overwatch-hero/images/hero23.png">
+        </div>
+        <div class="item" id="item24">
+            <img src="./overwatch-hero/images/hero24.png">
+        </div>
+        <div class="item" id="item25">
+            <img src="./overwatch-hero/images/hero25.png">
+        </div>
+        <div class="item" id="item26">
+            <img src="./overwatch-hero/images/hero26.png">
+        </div>
+        <div class="item" id="item27">
+            <img src="./overwatch-hero/images/hero27.png">
+        </div>
+        <div class="item" id="item28">
+            <img src="./overwatch-hero/images/hero28.png">
+        </div>
+        <div class="item" id="item29">
+            <img src="./overwatch-hero/images/hero29.png">
+        </div>
+        <div class="item" id="item30">
+            <img src="./overwatch-hero/images/hero30.png">
+        </div>
+        <div class="item" id="item31">
+            <img src="./overwatch-hero/images/hero31.png">
+        </div>
+        <div class="item" id="item32">
+            <img src="./overwatch-hero/images/hero32.png">
+        </div>
+    </div>
+    <footer>
+        <div class="logo"></div>
+    </footer>
+</body>
+</html>

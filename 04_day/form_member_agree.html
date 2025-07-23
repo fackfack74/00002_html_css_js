@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>회원가입하기</h1>
+    </center>
+    <fieldset style="width: 400px;">
+        <legend>회원가입 동의서</legend>
+        <form method="post" action="./form_member_join.html">
+            <label for="use_agree">이용약관 동의(필수)</label><br>
+            <textarea style="width: 300px; height: 100px; resize: none;">
+여러분을 환영합니다.
+네이버 서비스 및 베품(이하 서비스)를 이용해 주셔서 감사합니다.
+            </textarea><br>
+            <!-- checkbox와 radio 버튼은 name 으로 그룹을 이룬다. -->
+            <input type="radio" name="use_agree" id="use_agree_ok" checked>동의합니다.
+            <input type="radio" name="use_agree" id="use_agree_fail">동의하지 않습니다.
+            <br><br>
+            <label for="info_agree">개인정보 수집 및 이용동의(필수)</label><br>
+            <textarea style="width: 300px; height: 100px; resize: none;">
+여러분을 환영합니다.
+네이버 서비스 및 베품(이하 서비스)를 이용해 주셔서 감사합니다.
+            </textarea><br>
+            <input type="radio" name="info_agree" id="info_agree_ok" checked>동의합니다.
+            <input type="radio" name="info_agree" id="info_agree_fail">동의하지 않습니다.
+            <br>
+            <input type="checkbox" id="all_agree" name="all_agree" checked>모두 동의합니다.
+            <br>
+            <!--
+            <input type="button" value="취소"  onclick="history.back();">
+            <input type="submit" value="확인">
+            -->
+            <input type="button" value="취소"  onclick="history.go(-1);">
+            <input type="button" value="확인"  onclick="location.href='./form_member_join.html'">
+        </form>
+    </fieldset>
+</body>
+</html>

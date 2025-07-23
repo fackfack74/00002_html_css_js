@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="박재일">
+    <link rel="icon" type="image/x-icon" href="../ico/001.ico" />
+    <title>fackfack페이지</title>
+</head>
+<body>
+    <!-- Ctrl or Shift를 누른상태에서 멀티선택 가능 -->
+    <!-- 일반 사용자는 모르기때문에 multiple을 사용하지 않음 -->
+    <select size="6" multiple>
+        <option>커피</option>
+        <option>콜라</option>
+        <option>쥬스</option>
+        <option>생수</option>
+        <option>녹차</option>
+        <option>맥주</option>
+    </select>
+    <br><br>
+    <!-- multiple의 경우 selected가 모두 선택됨. 
+    <select size="6" multiple>
+    -->
+    <!-- multiple이 아닌 경우 마지막 selected만 선택됨. -->
+    <select size="6">
+        <option value="coffee" selected>커피</option>
+        <option value="coke">콜라</option>
+        <option value="juice" selected>쥬스</option>
+        <option value="water">생수</option>
+        <option value="green_tea">녹차</option>
+        <option value="beer">맥주</option>
+    </select>
+    <br><br>
+
+    <textarea>글자의 길이 및 줄에 상관없이 많이 입력가능. 박스의 크기도 조절 가능.</textarea>
+    <!-- resize:none;을 이용하여 사이즈조절 비활성화 -->
+    <!-- display: 를 이용하여 inline 과 block 속성 적용 -->
+    <textarea style="resize: none; display: block;" cols="30" rows="2" maxlength="100" placeholder="필수입력"></textarea>
+    <br><br>
+    <progress style="width: 200px; background-color: brown;" value="60" max="100"></progress>
+    <br><br>
+    <input type="button" value="push" onclick=""><br>
+</body>
+</html>

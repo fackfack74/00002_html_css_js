@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* View Port의 잡흰 공간을 모두 확보 */
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            background-color: yellow;
+            border-bottom: 1px solid lightgray;
+        }
+        header .container{
+            
+            width: 980px;
+            height: 60px;
+            
+/*            width: 80%;*//* %로 하는 경우 해상도가 낮을 때 크기가 고정으로 잡흰 항목들이 흐트러지는 상태가 발생 */
+
+            /*
+            margin: 0 auto;*/
+            margin-top: 0;
+            margin-bottom: 0;
+            /* auto는 요소바깥여백: 여백자동; - 이 속성과 값은 container를 수평 가운데 정렬하는 속성으로 쓰입니다. */
+            margin-left: auto;
+            margin-right: auto;
+            background-color: green;
+            border: 2px solid;
+            border-color: black;
+            /* overflow: auto;는 하부 요소의 margin과 padding에 영향을 받지 않기위함. */
+            overflow: auto;
+        }
+        header .container .container-left{
+            width: 50%;
+            padding-top: 20px ;
+            padding-bottom: 40px;
+            background-color: blueviolet;
+        }
+        header .container .container-left .logo{
+            /* 수평정렬: 왼쪽부터차례대로; - logo와 menu를 수평 정렬하기 위해 사용되었습니다. 
+            이 속성의 정확한 의미는 수평 정렬이 아니지만 쉽게 이해하도록 의역했습니다. */
+            float: left;
+            background-color: blue;
+        }
+        header .container .container-left .logo img{
+            display: block;/* 요소특성: 형태위주; 
+                            - img(이미지) 하단에 생기는 불필요한 여백을 없애기 위해서 사용되었습니다. */
+        }
+        header .container .container-left ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;   /* 리스트 속성 중 앞에 생기는 마크를 없애기 위함. */
+            float: left;
+        }
+        header .container .container-left ul li{
+            margin: 0;
+            float: left;
+            /*
+            padding: 4px 10px; 하단과 동일*/
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <!-- clearfix 클래스 값이 추가 되었군요! -->
+    <!-- class 속성은 띄어쓰기로 여러 클래스를 구분하여 동시에 사용할 수 있습니다. -->
+    <!-- 아래 요소는 <div class="container" class="clearfix"> 와 같습니다. -->
+        <div class="container">
+        <!-- clearfix 클래스 값이 추가 되었군요! -->
+            <div class="container-left">
+                <div class="logo">
+                    <img src="https://heropcode.github.io/GitHub-Responsive/img/logo.svg" alt="GitHub Logo">
+                </div>
+                <!-- clearfix 클래스 값이 추가 되었군요! -->
+                <ul class="menu clearfix">
+                    <li style="background-color: white;" class="menu-item">Personal</li>
+                    <li style="background-color: gray;" class="menu-item">Open Source</li>
+                    <li style="background-color: white;" class="menu-item">Business</li>
+                    <li style="background-color: gray;" class="menu-item">Explore</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

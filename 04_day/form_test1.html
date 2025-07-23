@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="박재일">
+    <link rel="shortcut icon" type="image/x-icon" href="../ico/001.ico" />
+    <title>fackfack페이지</title>
+</head>
+<body>
+    <form method="post" action="fake_server.php">
+        <del>deleted text</del>
+        <ins>inserted text</ins><br>
+        <table>
+            <tr>
+                
+                <td>
+                    <label for="id">아이디</label>
+                </td>
+                <!-- id는 현 화면에서 사용되는 키값? -->
+                <!-- name은 전달될 때의 키값으로 사용됨. -->
+                <!-- disable 속성은 입력은 못하지만 입력되어있는 값을 복사는 가능 -->
+                <!-- readonly 속성은 disable과 달리 입력되어있는 값을 복사할 수 없음 -->
+                <!-- required 속성은 값이 입력되지 않았을 때 입력요구를 출력. 필수입력 항목에 사용. -->
+                <td colspan="3">
+                    <input style="width: 120px;" type="text" id="id" name="id" value="아이디" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pw">패스워드</label>
+                </td>
+                <td colspan="3">
+                    
+                    <input style="width: 120px;" type="password" id="pw" name="pw" value="패스워드" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input style="width: 150px;" type="submit" value="로그인">
+                </td>
+                <td>
+                    <input style="width: 150px;" type="button" value="회원가입(현재페이지)" onclick="location.href='./form_member_agree.html'">
+                </td>
+                <td>
+                    <input style="width: 150px;" type="button" value="회원가입(새페이지)" onclick="window.open('http://127.0.0.1:5501/04_day/form_member_agree.html')">
+                </td>
+                <td>
+                    <input style="width: 150px;" type="button" value="회원가입(팝업창)" onclick="window.open('http://127.0.0.1:5501/04_day/form_member_agree.html', 'new', 'scrollbars=yes, resizable=no width=200 height=250, let=0, top=0')">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
