@@ -1,0 +1,43 @@
+Block Tag
+항상 새 줄에서 시작하고 브라우저는 자동으로 요소 앞뒤에 공백(여백)을 추가합니다.
+자신의 내용만으로 한 라인을 독점해서 출력하는 태그입니다.
+부모태그의 너비를 가져오고 높이는 자신의 태그의 자식태그의 높이를 가져옵니다.
+
+<address>	<article>	<aside>	<blockquote>	<canvas>	<dd>
+<div>	<dl>	<dt>	<fieldset>	<figcaption>	<figure>
+<footer>	<form>	<h1>-<h6>	<header>	<hr>	<li>
+<main>	<nav>	<noscript>	<ol>	<p>	<pre>
+<section>	<table>	<tfoot>	<ul>	<video>	 
+
+-------------------------------------
+자주 사용하는 Tag
+<div> 
+</div>
+<h1~6> </h1~6>
+<form> 
+	<fieldset> 
+		<legend> </legend>
+	</fieldset>
+</form>
+<ul>
+	<li>
+	</li>
+</ul>
+
+Inline Tag
+필요한 만큼만 너비를 차지합니다.
+자신의 내용과 앞뒤 태그의 내용을 같은 라인에 출력하는 태그입니다.
+<a>	<abbr>	<acronym>	<b>	<bdo>	<big>
+<br>	<button>	<cite>	<code>	<dfn>	<em>
+<i>	<img>	<input>	<kbd>	<label>	<map>
+<object>	<output>	<q>	<samp>	<script>	<select>
+<small>	<span>	<strong>	<sub>	<sup>	<textarea>
+<time>	<tt>	<var>	 
+
+-------------------------------------
+자주 사용하는 Tag
+<a href> </a>
+<script> </script>
+<span> </span>
+<button> </button>
+<img src="" />
