@@ -1,4 +1,4 @@
-Block Tag
+Block Tag : width(100%), auto line feed
 항상 새 줄에서 시작하고 브라우저는 자동으로 요소 앞뒤에 공백(여백)을 추가합니다.
 자신의 내용만으로 한 라인을 독점해서 출력하는 태그입니다.
 부모태그의 너비를 가져오고 높이는 자신의 태그의 자식태그의 높이를 가져옵니다.
@@ -23,8 +23,16 @@ Block Tag
 	<li>
 	</li>
 </ul>
+<table>
+	<tr>
+		<th></th>...
+	</tr>
+	<tr>
+		<td></td>...
+	</tr>
+</table>
 
-Inline Tag
+Inline Tag : width(auto), 옆으로 계속 생성.
 필요한 만큼만 너비를 차지합니다.
 자신의 내용과 앞뒤 태그의 내용을 같은 라인에 출력하는 태그입니다.
 <a>	<abbr>	<acronym>	<b>	<bdo>	<big>
