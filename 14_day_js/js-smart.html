@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getSound(animal){
+            const sounds = {
+                개: "멍멍",
+                고양이: "야옹",
+            }
+            return sounds[animal] || "...?";
+        };
+        console.log(getSound("개"));
+        console.log(getSound("뱀"));
+
+        function makeSound(animal){
+            const tasks = {
+                개(){
+                    console.log("멍멍");
+                },
+                고양이(){
+                    console.log("야옹");
+                }
+            };
+            if(!tasks[animal]){
+                console.log("..?");
+                return;
+            }
+            tasks[animal]();
+        };
+        
+        makeSound("고양이");
+        makeSound("고라니");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

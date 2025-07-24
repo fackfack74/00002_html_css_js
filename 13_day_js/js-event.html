@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+    </ul>
+
+    <button id="addBtn">Add Item</button>
+
+    <script>
+        document.getElementById("addBtn").addEventListener("click", function() {
+            addListItem();
+        });
+
+        function addListItem(){
+            let myList = document.getElementById("myList");
+            let newItem = document.createElement("li");
+            newItem.textContent = (myList.childElementCount + 1) + "New Item";
+            newItem.addEventListener("click", function(){
+                alert(newItem.textContent);
+        });
+            myList.appendChild(newItem);
+        }
+
+        document.getElementById("myList").addEventListener("click", function(event){
+            if(event.target.tagName === "LI"){
+                modifyListItem(event.target);
+            }
+        });
+
+        function modifyListItem(item){
+            const msgBox = prompt("Now:" + item.textContent + "\nEnter new text:");
+            item.textContent = msgBox;
+        }
+    </script>
+</body>
+</html>

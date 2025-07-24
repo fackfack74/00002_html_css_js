@@ -1,0 +1,43 @@
+body{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.top_menu{
+    width: 320px;
+    height: 640px;
+//    background-color: rgba(10, 20, 30, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_bgimg{
+    width: 100%;
+    height: 50%;
+    background-image: url("./img/heropy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+//    background-size: auto;
+    background-size: 100%;
+
+    display: flex;
+    justify-content: center;
+ //   align-items: center;
+}
+
+.top_img{
+    top: 320px;
+    width: 100%;
+    height: 50%;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .top_menu .top_img #img{
+    src: "./img/heropy.png";
+}

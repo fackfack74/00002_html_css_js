@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const doggy = {
+            name: '멍멍이',
+            sound: '멍멍',
+            age: 2,
+        };
+        console.log(Object.entries(doggy));
+        console.log(Object.keys(doggy));
+        console.log(Object.values(doggy));
+        for(let key in doggy){
+            console.log(key, `${key}: ${doggy[key]}`);
+        }
+        console.log();
+        for(let i = 0; i < Object.entries(doggy).length; i++){
+            console.log(i, `${Object.keys(doggy)[i]}: ${Object.values(doggy)[i]}`);
+        }
+
+        const cats = [
+            {name: 'white cat', sound: 'ya~ng', age: 2},
+            {name: 'black cat', sound: 'yo~ng', age: 3},
+        ]
+        console.log(Object.entries(cats));
+        console.log(Object.keys(cats[0]));
+        for(let i = 0; i < cats.length; i++){
+            for(let j = 0; j < cats[i].entries().length; j++){
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//        const object = { a: 1, b: 2 };
+        const object = { a: 1};
+
+        const { a, b = 2 } = object;
+
+        console.log(a); // 1
+        console.log(b); // 2
+
+        const animal = {
+            name: "멍멍이",
+            type: "개",
+        };
+
+//        const nickname = animal.name;
+//        console.log(nickname);
+
+        const {name: nickname} = animal;
+        console.log(nickname);
+
+        const array = [1,2,3,4,5];
+        const [first, second, four] = array;
+        console.log(four);
+        console.log(five = 6);
+
+        const deepObject = {
+            state: {
+                information: {
+                    name: "velopert",
+                    languages: ["ko", "en", "ch"]
+                }
+            },
+            value: 5
+        };
+
+        const {name, languages} = deepObject.state.information;
+        const {value} = deepObject;
+
+        const extracted = {
+            name,
+            languages,
+            value
+        };
+
+        console.log(extracted);
+
+
+        const coupang  = {
+            "legacyProductId": 6683232069,
+            "vendorItemId": 82638716929,
+            "adBadgeArea": {
+                "sponsored": true,
+                "adzerkLog": {
+                    "clickLogUri": "https://mercury.coupang.com/e.gif?r=fa220120-6781-11f0-83f9-be536699dc4d%7E3",
+                    "impressionLogUri": "https://mercury.coupang.com/e.gif?r=fa220120-6781-11f0-83f9-be536699dc4d%7E1",
+                    "viewImpression": "https://mercury.coupang.com/e.gif?r=fa220120-6781-11f0-83f9-be536699dc4d%7E2",
+                    "feedsId": "feed-c2695b5e2c244f289bacd8d0a3c92158-3.11.29:home_c3-178155",
+                    "eventId": "fa220120-6781-11f0-83f9-be536699dc4d"
+                },
+                "showSeparator": false
+            },
+            "link": "
+            /vp
+            /products
+            /6683232069?
+            itemId=15418906151&
+            vendorItemId=82638716929&
+            sourceType=srp_product_ads&
+            clickEventId=fa220120-6781-11f0-83f9-be536699dc4d&
+            from=home_CategoryBest_ranking&
+            traid=home_CategoryBest_ranking",
+            "imageAndTitleArea": {
+                "oriDefaultUrl": "retail/images/9170733555498277-473697c7-1842-4a6a-98aa-57c7a7a50a28.jpg",
+                "oriTravelUrl": "",
+                "title": "구스페리 올인원 카드수납 가죽 커버 with 링 휴대폰 케이스",
+                "rluxBrandNameArea": {
+                    "badgeImage": {}
+                }
+            },
+            "attributeCount": -1,
+            "priceArea": {
+                "instantDiscountPrice": "",
+                "i18nPrice": {
+                    "amount": "13290"
+                },
+                "price": "13,290"
+            },
+            "rocketArea": {
+                "show": true,
+                "badgeImage": {
+                    "iconUrl": "https://image6.coupangcdn.com/image/cmg/icon/ios/logo_rocket_large@3x.png"
+                }
+            },
+            "globalArea": {
+                "show": false,
+                "badgeImage": {}
+            },
+            "soldoutArea": {
+                "soldOutText": "일시품절",
+                "soldout": false
+            },
+            "subscriptionPriceArea": null,
+            "couponNudgeText": null,
+            "couponNudgeStyle": null,
+            "rocketFreeShippingBadge": null,
+            "couponTagArea": null,
+            "priceTagArea": {
+                "css": "prod-type discounted-price",
+                "title": "",
+                "discountRate": ""
+            }                           
+        };
+
+        const { price: showPrice } = coupang.priceArea;
+        console.log(showPrice);
+        console.log(coupang);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

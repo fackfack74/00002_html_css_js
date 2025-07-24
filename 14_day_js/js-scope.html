@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var value = "Hello";
+        function myFun(){
+            const value = "bye";
+            const anotherValue = "World";
+
+            function inFun(){
+                console.log("inFun");
+                console.log(value);
+                console.log(anotherValue);
+            }
+            inFun();
+        }
+        myFun();
+
+        if(true){
+            var value = "world";
+            console.log("block scope");
+            console.log(value);
+        }
+        console.log("global");
+        console.log(value);
+        console.log(anotherValue);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
