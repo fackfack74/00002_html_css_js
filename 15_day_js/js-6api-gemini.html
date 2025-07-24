@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="user_question">
+        <label>질문하세요<input id="question_prompt" type="text"></label>
+        <button id="btn_question">질문하기</button>
+    </div>
+    <div class="api_response">
+        <textarea id="response_box" width:400px height:600px></textarea>
+    </div>
+
+
+
+    <script>
+        const GEMINI_API_KEY = 'AIzaSyDDZmHruXU6Twsc-0hAGv5kiTDYIR0YwhE';
+        const MODEL_NAME = 'gemini-pro';
+        const question = document.getElementById("question_prompt");
+//        const question_btn = document.getElementById("btn_question");
+        const response_box = document.getElementById("response_box");
+
+        document.getElementById("btn_question").addEventListener("click", function() {
+            main();
+        });
+        async function callgeminiapi(prompt){
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent`;
+            try{
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers:{
+                        'Content-type': 'application/json',
+                        'X-goog-api-key': GEMINI_API_KEY,
+                    },
+                    body: JSON.stringify({
+                        contents: [
+                            {
+                                parts: [
+                                                                                    {
+                                        text: prompt,
+                                    },
+                                ],
+                            },
+                        ],
+                    }),
+                });
+
+                if(!response.ok){
+                    const errorData = await response.json();
+                    throw new Error("Gemini API error");
+                }
+
+                const data = await response.json();
+                return data;
+            }catch(e){
+                console.error("error:", e);
+                return {error: e.message};
+            }   
+        }
+
+        async function main(){
+            const userPrompt = question.value;
+            console.log(question.value);
+            console.log(`send prompt: "${userPrompt}"`);
+
+            const result = await callgeminiapi(userPrompt);
+
+            if(result && result.candidates && result.candidates.length > 0){
+                const firstPart = result.candidates[0].content.parts[0];
+                response_box.textContent = firstPart.text;
+                console.log("gemini API response: ", firstPart.text);
+            }else{
+                console.log("No valid response");
+                response_box.textContent = result;
+                console.log(result);
+            }
+        }
+
+//        main();
+    </script>
+</body>
+</html>

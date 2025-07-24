@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sleep(ms){
+            return new Promise(resolve => {
+                setTimeout(()=> {
+                    console.log("sleep");
+                    resolve();
+                }, ms);
+            });
+        }
+
+        async function process(){
+            console.log("hello");
+            await sleep(1000);
+            console.log("bye");
+        }
+
+//        process();
+//        console.log("pro end");
+        // hello, pro end, sleep, bye
+
+        process().then(() => {
+            console.log("end");
+        });
+
+        async function makeError(){
+            await sleep(1000);
+            throw new Error();
+        }
+
+        async function process1(){
+            try{
+                await makeError();
+            }catch(e){
+                console.log(e);
+            }
+        }
+
+        process1();
+
+        const process2 = async() => {
+            await sleep(1000);
+            return "end sleep";
+        };
+
+        const rcv = await process2();
+        console.log(rcv);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
