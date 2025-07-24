@@ -1,0 +1,4 @@
+# .gitignore 파일 내용
+JavaDevelopment/OnlineShoppingQueryThread/src/db/OraConnect_have not select.java
+JavaDevelopment/OnlineShoppingQueryThread/src/manage/have not select/
+.vscode
