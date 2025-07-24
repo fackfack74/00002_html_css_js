@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+/*        function increaseAndPrint(n, callback) {
+            setTimeout(() => {
+                const increased = n + 1;
+                console.log(increased);
+                if (callback) {
+                    callback(increased);
+                }
+            }, 1000);
+        }
+
+        increaseAndPrint(0, n => {
+            increaseAndPrint(n, n => {
+                increaseAndPrint(n, n => {
+                    increaseAndPrint(n, n => {
+                        increaseAndPrint(n, n => {
+                            console.log('끝!');
+                        });
+                    });
+                });
+            });
+        });
+*/
+        function increaseAndPrint(n){
+            //  resolve는 다음 실행할 함수
+            //  reject는 오류 시 실행할 함수
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const increased = n + 1;
+                    if(increased === 5){
+                        reject(new Error("Over num:" + increased));
+                        return;
+                    }
+                    console.log(increased);
+                    if(resolve)
+                        resolve(increased);
+                }, 1000);
+            });
+        }
+
+        increaseAndPrint(0).then(n => {
+            console.log("end:", n);
+        });
+
+        increaseAndPrint(0)
+        .then(n => {
+            return increaseAndPrint(n);
+        })
+        .then(n => {
+            return increaseAndPrint(n);
+        })
+        .then(n => {
+            return increaseAndPrint(n);
+        })
+        .then(n => {
+            return increaseAndPrint(n);
+        })
+        .catch(e => {
+            console.log("err:", e);
+        });
+
+/*        const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject(new Error());
+                resolve(1);
+        
+            }, 1000);
+        });
+
+        myPromise.then(n => {
+            console.log("p" + n);
+        })
+        .catch(e => {
+            console.log("p Err: ", e);
+        });
+
+        function tryCatch(){
+            try{
+                throw new Error();
+            }catch(e){
+                console.log("Err: ", e);
+            }
+        }
+        tryCatch();*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
