@@ -4,7 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <style>
+        body{
+            top: 0px;
+            left: 0px;
+        }
+        .user_question{
+            top: 10px;
+            left: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .user_question #question_prompt{
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 200px;
+            height: 20px;
+
+            font-size: 14px;
+        }
+        .user_question #btn_question{
+            width: 100px;
+            height: auto;
+        }
+        .api_response{
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .api_response #response_box{
+            width: 450px;
+            height: 500px;
+
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <div class="user_question">
@@ -40,7 +78,7 @@
                         contents: [
                             {
                                 parts: [
-                                                                                    {
+                                   {
                                         text: prompt,
                                     },
                                 ],
@@ -62,12 +100,12 @@
             }   
         }
 
-        async function main(){
-            const userPrompt = question.value;
+        async function main(){  //  질문하기 버튼 클릭 시 불려지는 함수
+            const userPrompt = question.value;  //  질문 텍스트 박스
             console.log(question.value);
             console.log(`send prompt: "${userPrompt}"`);
 
-            const result = await callgeminiapi(userPrompt);
+            const result = await callgeminiapi(userPrompt); //  제미나이 함수
 
             if(result && result.candidates && result.candidates.length > 0){
                 const firstPart = result.candidates[0].content.parts[0];
@@ -80,7 +118,7 @@
             }
         }
 
-//        main();
+//      main();
     </script>
 </body>
 </html>
