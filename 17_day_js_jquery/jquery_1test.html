@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local에 다운로드 
+     (https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/)
+     에서 Download https://code.jquery.com/jquery-3.5.1.js 선택
+     Ctrl+A 선택(전체선택) 후 메모장에 붙여넣어 jquery-3.5.1.js로 저장
+     -->
+    
+    <script src="./jquery-3.5.1.js"></script>
+    <style>
+        .my-class{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- jquery 사용처는 선택자(css)와 DOM 조작을 위함 -->
+     <p class="my-class">CLASS요소</p>
+     <p id="my-id">ID요소</p>
+     <script>
+        let myClass = $(".my-class"); //document.querySelector(".my-class");
+        let myId = $("#my-id"); //document.getElementById("my-id");
+        console.log(myClass);
+        console.log(myId);
+        let myId2 = document.querySelector("#my-id");
+        let myId3 = document.getElementById("my-id");
+        console.log(myId2);
+        console.log(myId3);
+        myId2.textContent = "수정된 ID요소";
+//        myId3.textContent = "수정된 ID요소2";
+//        let myClass2 = document.querySelector(".my-class");
+        $(".my-class").text("수정된 요소"); 
+        //jQuery로 받아온 객체(변수)와 document(DOM)으로 받아온 객체(변수)의 사용 방법이 다름.
+        //document.querySelector(".my-class").textContent = "수정된 요소";
+        //myClass.text("수정2 요소");
+        $(".my-class").attr("style", "color: red; font-size: 40px;");
+        //document.querySelector(".my-class").setAttribute("style", "color: blue; font-size: 40px;");
+        
+     </script>
+</body>
+</html>

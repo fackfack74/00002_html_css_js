@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        // 배열은 [], json은 {key: value}
 //        const object = { a: 1, b: 2 };
         const object = { a: 1};
 
@@ -21,8 +22,9 @@
 //        const nickname = animal.name;
 //        console.log(nickname);
 
-        const {name: nickname} = animal;
-        console.log(nickname);
+        const {name: nickname} = animal; // name은 nickname 선언
+        console.log(nickname); // nickname 호출
+        //  nickname -> name -> animal의 name은 "멍멍이" 출력.
 
         const array = [1,2,3,4,5];
         const [first, second, four] = array;
@@ -65,16 +67,6 @@
                 },
                 "showSeparator": false
             },
-            "link": "
-            /vp
-            /products
-            /6683232069?
-            itemId=15418906151&
-            vendorItemId=82638716929&
-            sourceType=srp_product_ads&
-            clickEventId=fa220120-6781-11f0-83f9-be536699dc4d&
-            from=home_CategoryBest_ranking&
-            traid=home_CategoryBest_ranking",
             "imageAndTitleArea": {
                 "oriDefaultUrl": "retail/images/9170733555498277-473697c7-1842-4a6a-98aa-57c7a7a50a28.jpg",
                 "oriTravelUrl": "",

@@ -6,10 +6,12 @@
     <title>Document</title>
     <script>
         function calculateCircleArea(r = 1){
+            //  매개변수 r의 값이 없으면 기본 1로 인식
             return Math.PI * r * r;
         }
 
         let area = calculateCircleArea();
+        // r의 값이 1로 수행됨.
         console.log(area);
         area = calculateCircleArea(3);
         console.log(area);

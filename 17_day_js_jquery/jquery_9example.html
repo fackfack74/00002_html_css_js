@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local에 다운로드 
+     (https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/)
+     에서 Download https://code.jquery.com/jquery-3.5.1.js 선택
+     Ctrl+A 선택(전체선택) 후 메모장에 붙여넣어 jquery-3.5.1.js로 저장
+     -->
+    
+    <script src="./jquery-3.5.1.js"></script>
+    <!--
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    -->
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        /*
+       $("#myForm").validate({
+            submitHandler: function(form){
+                alert("form submitted successfully");
+                form.submit();
+            }
+        });*/
+
+        $(document).ready(function(){
+            let form_gInput = $("#myForm");
+            let gInput = form_gInput.find("input");
+            console.log("length: " + gInput.length);
+            $('#myForm button[type="submit"]').on("click", function(){
+                let sel = 0;
+                gInput.each(function(){
+                    let currentText = $(this).val();
+                    let currentName = $(this).attr("name");
+                    if(currentText === ""){
+                        alert(currentName + ": 입력바랍니다.");
+                        return;
+                    }
+                    sel++;
+                });
+                console.log("input: " + sel)
+                if(sel == gInput.length){
+                    alert("제출 완료");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

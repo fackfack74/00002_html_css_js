@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local에 다운로드 
+     (https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/)
+     에서 Download https://code.jquery.com/jquery-3.5.1.js 선택
+     Ctrl+A 선택(전체선택) 후 메모장에 붙여넣어 jquery-3.5.1.js로 저장
+     -->
+    
+    <script src="./jquery-3.5.1.js"></script>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" placeholder="홍길동">
+        <br>
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com">
+        <br>
+        <input type="submit" value="제출">
+    </form>
+    <div id="message"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#myForm").submit(function(e){
+                e.preventDefault();
+
+                let name = $("#name").val();
+                let email = $("#email").val();
+
+                if(name === "" || email === ""){
+                    $("#message").text("이름과 이메일은 필수입력입니다.");
+                }else{
+                    $("#message").text("이름과 이메일을 제출했습니다.");
+                }
+            });
+            $("#name").on("focus", function(e){
+                $(this).attr("placeholder", "");
+            });
+            $("#email").on("focus", function(e){
+                $(this).attr("placeholder", "");
+            });
+        });
+    </script>
+</body>
+</html>

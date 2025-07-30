@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local에 다운로드 
+     (https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/)
+     에서 Download https://code.jquery.com/jquery-3.5.1.js 선택
+     Ctrl+A 선택(전체선택) 후 메모장에 붙여넣어 jquery-3.5.1.js로 저장
+     -->
+    
+    <script src="./jquery-3.5.1.js"></script>
+
+    <style>
+        #myDiv{
+            width: 200px;
+            height: 200px;
+            background-color:blueviolet;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">click</button>
+    <div id="myDiv">Animation</div>
+    <script>
+        let sel = 0;
+        let objDiv = $("#myDiv");
+        
+        $(document).ready(function(){
+            $("#myButton").on("click", function(){
+                let displayDiv = objDiv.css("display");
+                console.log(displayDiv);
+                console.log(sel);
+                if(displayDiv === "none"){
+//                if(sel === 0){
+//                    $("#myDiv").fadeIn(500, function(){
+                        $("#myDiv").slideDown(500);
+//                    });
+                }
+                else{   // sel === 1 or displayDiv === "block"
+//                    $("#myDiv").fadeOut(500, function(){
+                        $("#myDiv").slideUp(500);
+//                    });
+                }
+                sel = sel ^ 0x01;
+            })
+        });
+    </script>
+</body>
+</html>

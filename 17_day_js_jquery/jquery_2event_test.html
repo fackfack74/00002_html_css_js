@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local에 다운로드 
+     (https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/)
+     에서 Download https://code.jquery.com/jquery-3.5.1.js 선택
+     Ctrl+A 선택(전체선택) 후 메모장에 붙여넣어 jquery-3.5.1.js로 저장
+     -->
+    
+    <script src="./jquery-3.5.1.js"></script>
+    <style>
+        body{
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <button id="mybtn">Click</button>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <a href="https://www.naver.com" id="myLink">naver</a>
+
+    <ul id="myList">
+        <li>바나나</li>
+        <li>사과</li>
+        <li>딸기</li>
+    </ul>
+
+    <div id="outerDiv" style="height: 200px; background-color: white;">
+        <div id="innerDiv" style="height: 100px; background-color: rgb(127, 171, 189);">
+            <button id="myButton">버튼</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+/*            $("#mybtn").on("click", function(){
+                $(this).text("Clicked");
+                $("#result").text("버튼이 클릭되었습니다.");
+            });*/
+            function handleClick(){
+                $(this).text("Clicked");
+                $("#result").text("버튼이 클릭되었습니다.");
+            }
+            $("#mybtn").on("click", handleClick);
+            $("#mybtn").on("click", function(e){
+                $("mybtn").off("click", handleClick);   //  클릭 이벤트 제거
+                $("#result").text("버튼의 클릭기능 제거.");
+                 console.log(e);
+            });
+
+            $("body").on("click", function(e){
+                let mouseX = e.pageX;
+                let mouseY = e.pageY;
+                $("#result").text("마우스 좌표 : (" + mouseX + ", " + mouseY + ")");
+
+                $("#result2").text(">");
+                $("#result3").text(">");
+                $("#result4").text(">");
+            });
+            
+            $("#myList").on("click", "li", function(e){
+                $("#result").text("선택한 항목: " + $(this).text());
+                console.log(e);
+            });
+
+            $("#myLink").on("click", function(e){
+                e.preventDefault();
+                alert("기본 기능 차단");
+            });
+
+            $("#outerDiv").on("click", function() {
+                $("#result2").text("outerDiv가 클릭되었습니다.");
+                alert("outerDiv가 클릭되었습니다.");
+            });
+
+            $("#innerDiv").on("click", function() {
+                event.stopPropagation();    //  가 없으면 계속 outerDiv가 클릭됨.
+                $("#result3").text("innerDiv가 클릭되었습니다.");
+                alert("innerDiv가 클릭되었습니다.");
+            });
+
+            $("#myButton").on("click", function(event) {
+                event.stopPropagation();    //  가 없으면 계속 innerDiv가 클릭됨.
+                $("#result4").text("버튼이 클릭되었습니다.");
+                alert("버튼이 클릭되었습니다.");
+            });
+        });
+    </script>
+</body>
+</html>
