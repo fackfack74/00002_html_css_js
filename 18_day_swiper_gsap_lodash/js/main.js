@@ -64,12 +64,12 @@ new Swiper(".promotion .swiper-container", {
   slidesPerView: 3, // 화면에 보여지는 개수
   spaceBetween: 10, //  슬라이드 간 간격
   centeredSlides: true, //  중앙의 것이 active 상태, pre, next
-  autoplay: true, //  prev, next 버튼을 누르면 autoplay가 false로 바뀜. 밑의 것으로 대체.
-/*  autoplay: {
+//  autoplay: true, //  prev, next 버튼을 누르면 autoplay가 false로 바뀜. 밑의 것으로 대체.
+  autoplay: {
     delay: 1000,
     disableOnInteraction: false,//  이 옵션이 있어샤 prev, next 버튼을 눌러도
                                   //  다시 활성화 됨.
-  },*/
+  },
   loop: true,
 //  direction: "vertical",
 //  speed: 300,
@@ -149,3 +149,21 @@ function floatingObject(selector, delay, size) {
 floatingObject('.floating1', 1, 15);    
 floatingObject('.floating2', .5, 15);    
 floatingObject('.floating3', 1.5, 20);
+
+// 하단 수상 swiper 슬라이드 사용
+new Swiper('.awards .swiper-container', {
+  slidesPerView: 5, // 한번에 보여줄 슬라이드 개수
+  spaceBetween: 30, // 슬라이드 사이 여백
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  loop: true,
+//  autoplay: true, //  prev, next 버튼을 누르면 autoplay가 false로 바뀜. 밑의 것으로 대체.
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,//  이 옵션이 있어샤 prev, next 버튼을 눌러도
+                                  //  다시 활성화 됨.
+  },
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next',
+  }
+});

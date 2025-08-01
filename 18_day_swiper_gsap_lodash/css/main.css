@@ -1,3 +1,28 @@
+
+/* 데스크탑 화면일 경우에는 모바일 화면을 없애기 */
+@media (min-width: 501px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}
+/* 모바일 화면일 경우에는 데스크탑 화면을 없애기 */
+@media (max-width: 500px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+
+
+
+
 /*
 CSS 어렵다. 자꾸 해봐도 잠깐만 놔두면 텅~ 빈다.
 
@@ -752,4 +777,253 @@ header .badges .badge {
   position: absolute;
   top: 0px;
   right: 0px;
+}
+
+.pick-your-favorite{
+  background-image: url("../img/favorite_bg.jpg");
+  
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pick-your-favorite .inner{
+  padding: 110px 0;
+}
+
+.pick-your-favorite .inner .text-group{
+/*  background-color: orange;*/
+  width: 362px;
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /*
+  flex-wrap: wrap;
+  justify-content: flex-end;*/
+}
+
+.pick-your-favorite .inner .text-group .title{
+  margin-bottom: 40px;
+}
+
+.pick-your-favorite .inner .text-group .description{
+  margin-bottom: 40px;
+}
+
+.pick-your-favorite .inner .text-group .btn{
+  color: #fff;
+  border-color: #fff;
+  width: 130px;
+}
+
+.reserve-store{
+  background-image: url("../img/reserve_store_bg.jpg");
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.reserve-store .inner{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-store .inner .medal{
+  width: 334px;
+  height: 334px;  
+}
+
+.reserve-store .inner .medal:hover .front{
+  transform: rotateY(180deg);
+}
+
+.reserve-store .inner .medal:hover .back{
+  transform: rotateY(0deg);
+}
+
+.reserve-store .inner .medal .front,
+.reserve-store .inner .medal .back{
+  /* 뒤에 위치한 요소 감추기와 transition은 움직이는 시간 1초 */
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.reserve-store .inner .medal .front{
+  /* 위아래에 위치한 front, back을 같은 위치로 이동 */
+  position: absolute;
+}
+
+.reserve-store .inner .medal .back{
+  /* 처음 위치할 때 좌우거울 처럼 출력 */
+  transform: rotateY(180deg);
+}
+
+.reserve-store .inner .medal .back .btn{
+  position:absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* 가운데 정렬 */
+  width: 130px;
+  top: 240px;     /*  위로 이동하여 back그림 안으로 이동 */
+}
+
+.find-store{
+  background-image: url("../img/find_store_bg.jpg");
+}
+
+.find-store .inner{
+  height: 400px;
+  display: flex;/* 가로 정렬을 위해 사용 [find-store-pic-group, find-store-texture-group]*/
+  border: 2 solid blue;
+  position: relative;
+}
+
+/* 부모 컨테이너를 Flexbox로 설정하여 자식 요소를 정렬 */
+.find-store .inner .find-store-pic-group {
+  width: 40%;
+  height: 100%;
+  display: flex;/* 가로 정렬을 위해 사용 [nth-child(1), nth-child(2)]*/
+  align-items: center;
+  /* 자식 요소 position: absolute의 기준점을 이 요소로 설정 */
+  position: relative;
+}
+
+/* 이미지 컨테이너가 부모 컨테이너의 크기에 맞춰지도록 설정 */
+.find-store .inner .find-store-pic-group .find-store-pic-container {
+  border-radius: 50%; /* div를 원형으로 만듬 */
+  overflow: hidden;   /* 원형을 벗어난 이미지를 지움 */
+}
+
+/* 이미지 스타일 (컨테이너를 가득 채우도록 설정) 기본값이 그러므로 삭제 */
+.find-store .inner .find-store-pic-group .find-store-pic-container img {
+/*  width: 100%;
+  height: 100%;
+  object-fit: cover;*/
+}
+
+/*
+.find-store .inner .find-store-pic-group .find-store-pic-container .find-store-pic1 
+위의 것으로 하면 .find-store .inner .find-store-pic-group .find-store-pic-container 의 
+설정값이 들지 않음.*/
+.find-store .inner .find-store-pic-group .find-store-pic-container:nth-child(1){
+  /* 첫번째 이미지 위치 조정 */
+  position: absolute; 
+  top: -50px;
+  left: -50px;
+}
+
+.find-store .inner .find-store-pic-group .find-store-pic-container:nth-child(2){
+  /* 두번째 이미지 위치 조정 */
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+
+/* texture를 나머지 가로 60% 적용하고, 내부에 text를 정렬 */
+.find-store .inner .find-store-texture-group{
+  width: 60%;
+  height: 100%;
+
+  display: flex;          /* 자식 요소들을 */
+  flex-direction: column; /* 세로로 정렬 */
+/*  justify-content: flex-start;*/  /* 맨위에 정렬 */
+  justify-content: center;/* 세로의 가운데 정렬 */
+  align-items: flex-start;      /* 왼쪽에 정렬 */
+}
+
+.find-store .inner .find-store-texture-group .find-store-texture1{
+  position: absolute; /* 부모요소 find-store-texture-group를 기준 */
+  top: 0;             /* 맨 위에 위치 */
+}
+
+.find-store .inner .find-store-texture-group .find-store-texture1 img{
+/*  width: 100%;
+  height: auto;
+  object-fit: cover;*/
+}
+
+.find-store .inner .find-store-texture-group .find-store-txt-group{
+  margin-left: 100px;       /* find-store-texture-group 기준 맨왼쪽에서 100px 떨어져 위치 */
+/*  width: 40%;*/
+  display: flex;            /* 자식요소들을 */
+  flex-direction: column;   /* 세로로 정렬 */
+  justify-content: center;  /* 맨위에 정렬 */
+  align-items:flex-start;   /* 왼쪽에 정렬 */
+}
+
+.find-store .inner .find-store-txt-group .find-store-txt1{
+  margin-bottom: 40px;
+}
+
+.find-store .inner .find-store-txt-group .find-store-txt2{
+  margin-bottom: 40px;
+}
+
+.find-store .inner .find-store-txt-group .more{
+  color: #fff;
+  border-color: #fff;
+  width: 130px;
+}
+
+.find-store .inner .find-store-texture-group .find-store-texture2{
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+}
+.find-store .inner .find-store-texture-group .find-store-texture2 img{
+/*  max-width: 100%;
+  height: auto;*/
+}
+
+.awards {
+  background-color: #272727;
+}
+.awards .inner {
+  padding: 40px 0;
+}
+.awards .swiper-container {
+  width: 100%;
+  height: 40px;
+}
+/* .awards .swiper-wrapper {
+  
+}
+.awards .swiper-slide {
+
+} */
+.awards .swiper-prev,
+.awards .swiper-next {
+  width: 42px;
+  height: 42px;
+  margin: auto 0;
+  border: 2px solid #fff;
+  color: #fff;
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover {
+  background-color: #fff;
+  color: #333;
+}
+.awards .swiper-prev {
+  left: -100px;
+}
+.awards .swiper-next {
+  right: -100px;
 }
